@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>YOWZA</title>
+		<link rel="icon" type="image/x-icon" href="../favicon.ico">
+	</head>
+	<body style="background-image: url('../images/iguanaBackground.jpg');">
+	
+		<h1 style="text-align: center;">YOWZA</h1>
+		
+		<div style="background-color: FloralWhite; width:50%; margin-left: 25%; text-align: center; border:1px solid black;">
+			<p><a style="font-weight: bold;" href="../index.html">Home</a>
+			| <a style="font-weight: bold;" href="motivationCorner.html">Motivation Corner</a>
+			| <a style="font-weight: bold;" href="iguanaAppreciationCentre.html">Iguana Appreciation Centre</a>
+			| <a style="font-weight: bold;" href="baconPage.html">Bacon Page</a>
+			| <a style="font-weight: bold;" href="test4.html">Secret Page</a>
+			| <a style="font-weight: bold;" href="physics.html">Physics Stuff</a></p>
+		</div>
+		
+		<p></p>
+		<h2 style="text-align: center;">Iguana Appreciation Centre</h2>
+		<div style="margin-left: 25%; width: 50%; text-align: center; background-color: FloralWhite; border:1px solid black;">
+			<p></p>
+			<a style="font-weight: bold;" href="test4.html"><img style="text-align: center; height: auto; width: 80%; border:1px solid black;" src="../images/iguana.jpg"></img></a>
+			<h3 id="edit" style="text-align: center;">Click to appreciate</h3>
+			<p></p>
+			<button style="text-align: center;" onclick="go()">GO</button>
+			<p></p>
+		</div>
+		
+		<script>
+			let edit = document.getElementById("edit")
+			let selection = "a3ewfe"
+			let list = ['Iguanas are incredible.','Iguanas work very hard.','Iguanas will never let you down.',
+				'Iguanas are never gonna give you up.','Iguanas are very strong.','Iguanas are very good at swimming.',
+				'Iguanas do not discriminate.','Iguanas look cool.','Iguanas are awesome.','Iguanas are very trustworthy.',
+				'Iguanas have a great taste in music.','Iguanas are honest.','Iguanas have impeccable manners.','Iguanas are all distinguished gentlemen']
+			
+			function random(list) {
+				return (list[Math.floor(Math.random() * list.length)])
+			}
+
+			function go() {
+				selection = random(list)
+				edit.innerHTML = selection
+			}
+		</script>
+		
+	</body>
+</html>
